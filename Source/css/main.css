@@ -149,17 +149,15 @@ a:visited
 		}
 	#intro .continue
 	{
-		padding: 0 0 0 0.125rem;
 		background-color: #FFF;
 		text-align: center;
-		font-weight: 300;
-		font-size: 14px;
+		font-weight: 200;
+		font-size: 15px;
 		height: 100%;
-		line-height: 0.74rem;
 	}
 		#intro .continue .arrow
 		{
-			display: inline-block;
+			margin: 10px auto;
 			width: 20px;
 			height: 10px;
 			/* icon_arrow_down_20x10.svg */
@@ -168,14 +166,18 @@ a:visited
 
 
 /* ==================================================
-    SECTION
+    ABOUT SECTION
    ================================================== */
 #body
 {
 	background-color: #FFF;
 	position: relative;
-	height: 1000px;
+	height: 3000px;
 	z-index: 10;
+
+	/*-webkit-box-shadow: 0 1px 3px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow: 0 1px 3px rgba(50,50,50,.3);
+	box-shadow: 0 -2px 10px rgba(50, 50, 50, 0.3);*/
 }
 	@media only screen and (min-width: 48rem)
 	{
@@ -185,3 +187,58 @@ a:visited
 			background: #FFF url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJiZ19saW5lXzF4MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjFweCIgaGVpZ2h0PSIxcHgiIHZpZXdCb3g9IjAgMCAxIDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEgMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHJlY3QgZmlsbD0iI0NGQ0ZDRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjwvc3ZnPg==) repeat-y 50%;
 		}
 	}
+	#nav
+	{
+		position: absolute;
+		top: 3em;
+		left: 2em;
+		font-weight: 200;
+		font-size: 23px;
+	}
+		#nav.sticky
+		{
+			position: fixed;
+		}
+		#nav .logo
+		{
+			width: 35px;
+			height: 35px;
+			background: gray;
+			margin-bottom: 10px;
+		}
+		#visitSource
+		{
+			position: absolute;
+			top: 0;
+			right: 2em;
+			visibility: hidden;
+			padding: 3px 10px 4px 10px;
+			font-weight: 300;
+			font-size: 16px;
+			background-color: #80B0CE;
+			-webkit-border-radius: 0 0 4px 4px;
+			   -moz-border-radius: 0 0 4px 4px;
+			        border-radius: 0 0 4px 4px;
+		}
+			#visitSource.sticky
+			{
+				position: fixed;
+				visibility: visible;
+			}
+			#visitSource a
+			{
+				color: white;
+			}
+			#visitSource a:hover
+			{
+				text-decoration: underline;
+			}
+			#visitSource .iconGithub
+			{
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				margin: 0 0 0 0;
+				background: gray;
+				vertical-align: text-bottom;
+			}
