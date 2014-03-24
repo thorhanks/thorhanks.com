@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="icon_mercent_9x15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="9px" height="15px" viewBox="0 0 9 15" enable-background="new 0 0 9 15" xml:space="preserve">
+	<path fill="#020202" d="M4.499,10.584L0,6.155V15h2v-3.679c0-0.288-0.117-0.656-0.132-0.959l2.683,2.734l2.603-2.723C7.137,10.677,7,11.038,7,11.321V15h2V6.155L4.499,10.584z"/>
+	<path fill="#020202" d="M6.292,2.014c-0.291,0-0.525,0.236-0.525,0.524c0,0.289,0.234,0.525,0.525,0.525c0.287,0,0.522-0.236,0.522-0.525C6.814,2.25,6.579,2.014,6.292,2.014"/>
+	<path fill="#EB008B" d="M8,3.937l-3.321,3.14L1.81,4.218L4.861,1h1.654L8,2.279v1.155c0,0.098,0,0.174,1,0.181V1.802L6.994,0H4.383L0.087,4.295l4.513,4.416L9,4.414V3.549C8,3.541,8,3.512,8,3.434V3.937z"/>
+</svg>
