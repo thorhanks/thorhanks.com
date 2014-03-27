@@ -24,6 +24,12 @@
 			$('#nav').toggleClass('sticky', isPastIntro);
 			$('#visitSource').toggleClass('sticky', isPastIntro);
 		});
+
+		// History timeline bar on click handler
+		$("#about").find(".history .bar").on("click", function()
+		{
+			document.getElementById("about").className = this.attributes["data-id"].value;
+		});
 	};
 
 	var _MyPrivateFunc = function()
