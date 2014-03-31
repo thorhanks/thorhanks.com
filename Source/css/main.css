@@ -212,7 +212,6 @@ h3
 {
 	background-color: #FFF;
 	position: relative;
-	padding-bottom: 300px;
 	z-index: 10;
 	border-top: 1px solid #C4C4C4;
 	/*-webkit-box-shadow: 0 1px 3px rgba(50, 50, 50, 0.3);
@@ -428,3 +427,144 @@ h3
 				background: gray;
 				height: 500px;
 			}
+	/* ========== CONTACT SECTION ========== */
+	#contact
+	{
+	}
+		#contact .icon
+		{
+			display: inline-block;
+			margin: 5px 0 10px 10px;
+			width: 30px;
+			height: 30px;
+			background: green;
+		}
+		.icon.facebook
+		{
+		}
+			.icon.facebook:hover
+			{
+			}
+		.icon.flickr
+		{
+		}
+			.icon.flickr:hover
+			{
+			}
+		.icon.forrst
+		{
+		}
+			.icon.forrst:hover
+			{
+			}
+		.icon.foursquare
+		{
+		}
+			.icon.foursquare:hover
+			{
+			}
+		.icon.github
+		{
+		}
+			.icon.github:hover
+			{
+			}
+		.icon.googlePlus
+		{
+		}
+			.icon.googlePlus:hover
+			{
+			}
+		.icon.instagram
+		{
+		}
+			.icon.instagram:hover
+			{
+			}
+		.icon.linkedIn
+		{
+		}
+			.icon.linkedIn:hover
+			{
+			}
+		.icon.pinterest
+		{
+		}
+			.icon.pinterest:hover
+			{
+			}
+		.icon.skype
+		{
+		}
+			.icon.skype:hover
+			{
+			}
+		.icon.stackOverflow
+		{
+		}
+			.icon.stackOverflow:hover
+			{
+			}
+		.icon.steam
+		{
+		}
+			.icon.steam:hover
+			{
+			}
+		.icon.twitter
+		{
+		}
+			.icon.twitter:hover
+			{
+			}
+		.icon.xbox
+		{
+		}
+			.icon.xbox:hover
+			{
+			}
+		.icon.youtube
+		{
+		}
+			.icon.youtube:hover
+			{
+			}
+		#contactMessage
+		{
+			display: block;
+			width: 275px;
+			height: 150px;
+			resize: both;
+			margin: 5px 0 10px 0;
+			padding: 3px 5px 3px 5px;
+			font-weight: 300;
+			border: 1px solid #C4C4C4;
+			-webkit-border-radius: 3px;
+			   -moz-border-radius: 3px;
+			        border-radius: 3px;
+		}
+		#contactEmail
+		{
+			display: block;
+			width: 275px;
+			margin: 0 0 15px 0;
+			padding: 3px 5px 3px 5px;
+			font-weight: 300;
+			-webkit-border-radius: 3px;
+			   -moz-border-radius: 3px;
+			        border-radius: 3px;
+			border: 1px solid #C4C4C4;
+		}
+		#contactSend
+		{
+		}
+	/* ========== FOOTER SECTION ========== */
+	#footer
+	{
+		background: #FFF;
+		height: 400px;
+		margin: 50px 0 0 0;
+		padding: 10px 0 0 0;
+		text-align: center;
+		vertical-align: top;
+	}
