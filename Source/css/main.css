@@ -2,7 +2,7 @@ html
 {
 	font-family: "Raleway", sans-serif;
 	color: #949494;
-	background-color: #EBEBEB;
+	background-color: #80B0CE;
 }
 /* BREAKPOINT: PORTRAIT TABLET AND WIDER */
 @media only screen and (min-width: 768px)
@@ -10,7 +10,7 @@ html
 	html /* ONLY SHOW VERTICAL LINE BACKGROUND FOR NON-PHONE */
 	{
 		/* bg_line_1x1.svg */
-		background: #EBEBEB url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJiZ19saW5lXzF4MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjFweCIgaGVpZ2h0PSIxcHgiIHZpZXdCb3g9IjAgMCAxIDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEgMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHJlY3QgZmlsbD0iI0NGQ0ZDRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjwvc3ZnPg==) repeat-y 50%;
+		background: #80B0CE url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJiZ19saW5lXzF4MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjFweCIgaGVpZ2h0PSIxcHgiIHZpZXdCb3g9IjAgMCAxIDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEgMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHJlY3QgZmlsbD0iI0NGQ0ZDRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjwvc3ZnPg==) repeat-y 50%;
 	}
 	.mobile /* HIDE ELEMENTS NOT INDENTED FOR DESKTOP */
 	{
@@ -93,6 +93,10 @@ h3
 /* ==================================================
     INTRO/WELCOME SECTION
    ================================================== */
+#intro
+{
+	color: #FFF;
+}
 /* BREAKPOINT: PORTRAIT TABLET AND WIDER */
 @media only screen and (min-width: 768px)
 {
@@ -104,14 +108,40 @@ h3
 		z-index: 1;
 	}
 }
+	#logo
+	{
+		top: 0px;
+		left: 50%;
+		padding: 15px 0 0 0;
+		background-color: #80B0CE;
+		margin-left: -20px;
+		position: fixed;
+		z-index: 1000;
+	}
+		#logo.below
+		{
+			background-color: #FFF;
+		}
+		#logo div
+		{
+			width: 40px;
+			height: 40px;
+			background: gray;
+		}
 	/* ========== WELCOME HEADING ========== */
 	#intro .welcome
 	{
-		margin-top: 100px;
+		margin-top: 150px;
 		margin-bottom: 50px;
 		font-size: 50px;
 		font-weight: 200;
 	}
+		#intro .welcome .highlight
+		{
+			background: #FFF;
+			color: #80B0CE;
+			font-weight: 300;
+		}
 	/* ========== ROLE DESCRIPTIONS ========== */
 	#intro .roles
 	{
@@ -131,13 +161,13 @@ h3
 		{
 			position: absolute;
 			left: 50%;
-			top: 4.45em;
+			top: 273px;
 			margin: 0 0 0 -0.22em;
 			font-weight: 400;
 			font-size: 50px;
 			line-height: 35px;
-			color: #80b0ce;
-			background-color: #EBEBEB;
+			color: #FFF;
+			background-color: #80B0CE;
 			vertical-align: middle;
 			z-index: -1;
 		}
@@ -146,17 +176,19 @@ h3
 	{
 		margin-top: 35px;
 		margin-bottom: 50px;
-		padding-top: 2px;
-		padding-bottom: 5px;
+		padding-top: 5px;
+		padding-bottom: 10px;
 		text-align: center;
-		font-size: 23px;
+		font-size: 17px;
 		font-weight: 200;
-		background-color: #EBEBEB;
+		background-color: #80B0CE;
 	}
 		#intro .currently a
 		{
 			position: relative;
 			display: inline-block;
+			color: #FFF;
+			text-decoration: underline;
 		}
 		#intro .currently .iconLinkedIn,
 		#intro .currently .iconMercent
@@ -169,7 +201,6 @@ h3
 			padding-left: 20px;
 			font-size: 13px;
 			font-weight: 400;
-			color: #949494;
 		}
 		#intro .currently .linkedIn:hover .iconLinkedIn,
 		#intro .currently .mercent:hover .iconMercent
@@ -189,7 +220,7 @@ h3
 	/* ========== CONTINUE ARROW ========== */
 	#intro .continue
 	{
-		background-color: #EBEBEB;
+		background-color: #80B0CE;
 		text-align: center;
 		font-weight: 200;
 		font-size: 15px;
@@ -232,8 +263,11 @@ h3
 	{
 		position: absolute;
 		display: none;
-		top: 3em;
-		left: 3%;
+		top: 0px;
+		width: 100%;
+		padding: 20px 0 20px 0;
+		text-align: center;
+		background-color: #FFF;
 		font-weight: 200;
 		font-size: 20px;
 	}
@@ -242,13 +276,20 @@ h3
 			position: fixed;
 			display: block;
 		}
-		#nav .logo
+		#nav div
 		{
-			width: 35px;
-			height: 35px;
-			background: gray;
-			margin-bottom: 10px;
+			display: inline-block;
+			margin-right: 25px;
 		}
+		#nav div:nth-of-type(2)
+		{
+			margin-right: 100px;
+		}
+		#nav div:nth-of-type(4)
+		{
+			margin-right: 0;
+		}
+
 	/* ========== ABOUT SECTION ========== */
 	#about
 	{
@@ -434,10 +475,10 @@ h3
 		#contact .icon
 		{
 			display: inline-block;
-			margin: 5px 0 10px 10px;
+			margin: 10px 10px 5px 0;
 			width: 30px;
 			height: 30px;
-			background: green;
+			background: gray;
 		}
 		.icon.facebook
 		{
@@ -531,13 +572,13 @@ h3
 			}
 		#contactMessage
 		{
-			display: block;
-			width: 275px;
-			height: 150px;
-			resize: both;
-			margin: 5px 0 10px 0;
+			display: inline-block;
+			width: 255px;
+			height: 145px;
+			resize: vertical;
+			margin: 10px 0 10px 0;
 			padding: 3px 5px 3px 5px;
-			font-weight: 300;
+			font-weight: 200;
 			border: 1px solid #C4C4C4;
 			-webkit-border-radius: 3px;
 			   -moz-border-radius: 3px;
@@ -545,11 +586,11 @@ h3
 		}
 		#contactEmail
 		{
-			display: block;
-			width: 275px;
+			display: inline-block;
+			width: 255px;
 			margin: 0 0 15px 0;
 			padding: 3px 5px 3px 5px;
-			font-weight: 300;
+			font-weight: 200;
 			-webkit-border-radius: 3px;
 			   -moz-border-radius: 3px;
 			        border-radius: 3px;
@@ -563,7 +604,8 @@ h3
 	{
 		background: #FFF;
 		height: 400px;
-		margin: 50px 0 0 0;
+		font-size: 13px;
+		margin: 100px 0 0 0;
 		padding: 10px 0 0 0;
 		text-align: center;
 		vertical-align: top;

@@ -25,6 +25,7 @@
 			// True if scrolled distance is into the body section
 			var isPastIntro = ($(window).scrollTop()) > ($("#body").offset().top);
 
+			$('#logo').toggleClass('below', isPastIntro);
 			$('#nav').toggleClass('sticky', isPastIntro);
 			$('#visitSource').toggleClass('sticky', isPastIntro);
 		});
@@ -49,7 +50,7 @@
 	{
 		/// <summary>Adjust intro section to fill the viewport height.</summary>
 
-		var contentHeight = $("#intro > div").height() + 100;
+		var contentHeight = $("#intro > div").height() + 150;
 		var viewportHeight = $(window).height();
 
 		// IF the window view is taller than the content then use it else keep content height

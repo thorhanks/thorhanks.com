@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<!-- ===== LOGO ===== -->
+	<div id="logo"><div></div></div>
 	<!-- ========== INTRO/WELCOME SECTION ========== -->
 	<div id="intro">
 		<div>
@@ -51,15 +53,12 @@
 				Currently <a class="linkedIn" href="http://www.linkedin.com/in/thorhanks/" target="_blank">UI/UX Architect<div class="iconLinkedIn animated fadeIn">Full profile</div></a>
 				at <a class="mercent" href="http://www.mercent.com/" target="_blank">Mercent Inc.<div class="iconMercent animated fadeIn">Mercent.com</div></a> in Seattle.
 			</div>
-			<!-- ===== CONTINUE ARROW ===== -->
-			<div class="continue not-mobile"><div class="arrow"></div> <!--scroll down--></div>
 		</div>
 	</div>
 	<!-- ========== BODY CONTENT CONTAINER ========== -->
 	<div id="body">
 		<!-- ===== NAV MENU ===== -->
-		<div id="nav" class="not-mobile animated fadeInLeft" style="display: none;">
-			<div class="logo"></div>
+		<div id="nav" class="not-mobile animated fadeIn">
 			<div>home</div>
 			<div>about</div>
 			<div>work</div>
@@ -273,8 +272,14 @@
 		<!-- ===== CONTACT SECTION ===== -->
 		<div id="contact" class="section">
 			<div class="grid">
-				<div class="col-1-12">&nbsp;</div>
-				<div class="col-5-12 left">
+				<div class="col-6-12 left">
+					<h3>what's going on?</h3>
+					<p>Question? Project? Job opening?</p>
+					<textarea id="contactMessage" placeholder="How can I help?"></textarea><br />
+					<input id="contactEmail" placeholder="What's your email?" /><br />
+					<a id="contactSend">Send to Thor</a>
+				</div>
+				<div class="col-5-12 right">
 					<h3>find me online</h3>
 					<p>It's easy, I've got links and everything.</p>
 					<div class="group">
@@ -301,18 +306,16 @@
 						<div class="icon xbox" title="Xbox"></div>
 					</div>
 				</div>
-				<div class="col-6-12 right">
-					<h3>or say hello</h3>
-					<p>Question? Project? Job opening?</p>
-					<textarea id="contactMessage" placeholder="How can I help?"></textarea>
-					<input id="contactEmail" placeholder="What's your email?" />
-					<a id="contactSend">Send to Thor</a>
-				</div>
+				<div class="col-1-12">&nbsp;</div>
 			</div>
 		</div>
 		<!-- ===== FOOTER SECTION ===== -->
 		<div id="footer" class="">
-			<a>fly me to the top</a>
+			&copy; Thor Hanks
+			<script>
+				var datetime = new Date();
+				document.write(datetime.getFullYear());
+			</script>
 		</div>
 	</div>
 	<script src="js/vendor/jquery.min.js"></script>
