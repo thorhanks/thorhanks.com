@@ -10,7 +10,7 @@ html
 	html /* ONLY SHOW VERTICAL LINE BACKGROUND FOR NON-PHONE */
 	{
 		/* bg_line_1x1.svg */
-		background: #80B0CE url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJiZ19saW5lXzF4MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjFweCIgaGVpZ2h0PSIxcHgiIHZpZXdCb3g9IjAgMCAxIDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEgMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHJlY3QgZmlsbD0iI0NGQ0ZDRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjwvc3ZnPg==) repeat-y 50%;
+		background: #80B0CE url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJiZ19saW5lXzF4MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjFweCIgaGVpZ2h0PSIxcHgiIHZpZXdCb3g9IjAgMCAxIDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEgMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQoJPHJlY3QgZmlsbD0iI0ZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPg0KPC9zdmc+) repeat-y 50%;
 	}
 	.mobile /* HIDE ELEMENTS NOT INDENTED FOR DESKTOP */
 	{
@@ -108,30 +108,10 @@ h3
 		z-index: 1;
 	}
 }
-	#logo
-	{
-		top: 0px;
-		left: 50%;
-		padding: 15px 0 0 0;
-		background-color: #80B0CE;
-		margin-left: -20px;
-		position: fixed;
-		z-index: 1000;
-	}
-		#logo.below
-		{
-			background-color: #FFF;
-		}
-		#logo div
-		{
-			width: 40px;
-			height: 40px;
-			background: gray;
-		}
 	/* ========== WELCOME HEADING ========== */
 	#intro .welcome
 	{
-		margin-top: 150px;
+		margin-top: 120px;
 		margin-bottom: 50px;
 		font-size: 50px;
 		font-weight: 200;
@@ -161,7 +141,7 @@ h3
 		{
 			position: absolute;
 			left: 50%;
-			top: 273px;
+			top: 242px;
 			margin: 0 0 0 -0.22em;
 			font-weight: 400;
 			font-size: 50px;
@@ -174,12 +154,12 @@ h3
 	/* ========== CURRENT JOB INFO ========== */
 	#intro .currently
 	{
-		margin-top: 35px;
-		margin-bottom: 50px;
+		margin-top: 15px;
+		margin-bottom: 60px;
 		padding-top: 5px;
 		padding-bottom: 10px;
 		text-align: center;
-		font-size: 17px;
+		font-size: 14px;
 		font-weight: 200;
 		background-color: #80B0CE;
 	}
@@ -224,15 +204,16 @@ h3
 		text-align: center;
 		font-weight: 200;
 		font-size: 15px;
-		height: 100%;
+		padding: 5px 0 10px 0;
 	}
 		#intro .continue .arrow
 		{
-			margin: 10px auto;
+			margin: 5px auto 0 auto;
 			width: 20px;
 			height: 10px;
+			vertical-align: baseline;
 			/* icon_arrow_down_20x10.svg */
-			background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJpY29uX2Fycm93X2Rvd25fMjB4MTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIxMHB4IiB2aWV3Qm94PSIwIDAgMjAgMTAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDEwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCgk8cG9seWdvbiBmaWxsPSIjODBCMENFIiBwb2ludHM9IjEwLDEwIDE0Ljc5OSw1IDE5LjU5OCwwIDEwLDAgMC40MDIsMCA1LjIwMSw1ICIvPg0KPC9zdmc+) no-repeat 0 0;
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Imljb25fYXJyb3dfZG93bl8yMHgxMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyMCAxMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAgMTAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTAsMTAgMTQuOCw1IDE5LjYsMCAxMCwwIDAuNCwwIDUuMiw1ICIvPjwvc3ZnPg==) no-repeat 0 0;
 		}
 
 
@@ -263,27 +244,28 @@ h3
 	{
 		position: absolute;
 		display: none;
-		top: 0px;
-		width: 100%;
-		padding: 20px 0 20px 0;
-		text-align: center;
+		top: 0;
+		right: 0;
+		padding: 3px 5px 3px 10px;
+		text-align: left;
 		background-color: #FFF;
-		font-weight: 200;
-		font-size: 20px;
+		border: 1px solid #FFF;
+		font-weight: 300;
+		font-size: 15px;
 	}
 		#nav.sticky
 		{
 			position: fixed;
-			display: block;
+			display: none;
 		}
 		#nav div
 		{
 			display: inline-block;
-			margin-right: 25px;
+			margin-right: 5px;
 		}
 		#nav div:nth-of-type(2)
 		{
-			margin-right: 100px;
+			margin-right: 5px;
 		}
 		#nav div:nth-of-type(4)
 		{
@@ -603,7 +585,7 @@ h3
 	#footer
 	{
 		background: #FFF;
-		height: 400px;
+		height: 100px;
 		font-size: 13px;
 		margin: 100px 0 0 0;
 		padding: 10px 0 0 0;

@@ -16,19 +16,8 @@
 		// Call once to init
 		_FitIntroSectionToWindow();
 
-		// Setup fit func to run on resize
-		$(window).on("resize", _FitIntroSectionToWindow);
-
-
-		$(window).scroll(function()
-		{
-			// True if scrolled distance is into the body section
-			var isPastIntro = ($(window).scrollTop()) > ($("#body").offset().top);
-
-			$('#logo').toggleClass('below', isPastIntro);
-			$('#nav').toggleClass('sticky', isPastIntro);
-			$('#visitSource').toggleClass('sticky', isPastIntro);
-		});
+		$(window).on("resize", _Debounce(_FitIntroSectionToWindow, 300, false));
+		$(window).on("scroll", _Debounce(_HandleScroll, 300, false));
 
 		// History timeline bar on click handler
 		$("#about").find(".history .bar").on("click", function()
@@ -59,13 +48,22 @@
 		$("#intro").height(newHeight);
 
 		// IF window is mobile width
-		if(_isMobile())
+		if(_IsMobile())
 			$("#body").css("margin-top", "0px");
 		else
 			$("#body").css("margin-top", newHeight + "px");
 	};
 
-	var _isMobile = function()
+	var _HandleScroll = function()
+	{
+		// True if scrolled distance is into the body section
+		var isPastIntro = ($(window).scrollTop()) > ($("#body").offset().top);
+
+		$('#nav').toggleClass('sticky', isPastIntro);
+		$('#visitSource').toggleClass('sticky', isPastIntro);
+	};
+
+	var _IsMobile = function()
 	{
 		/// <summary>Returns true if window is currently set for mobile.</summary>
 
@@ -73,4 +71,26 @@
 		// set it up for desktop width
 		return !($("#intro").css("position") === "fixed");
 	};
+
+	var _Debounce = function(func, wait, immediate)
+	{
+		// Returns a function, that, as long as it continues to be invoked, will not
+		// be triggered. The function will be called after it stops being called for
+		// N milliseconds. If `immediate` is passed, trigger the function on the
+		// leading edge, instead of the trailing.
+
+		var timeout;
+		return function()
+		{
+			var context = this, args = arguments;
+			clearTimeout(timeout);
+			timeout = setTimeout(function()
+			{
+				timeout = null;
+				if(!immediate) func.apply(context, args);
+			}, wait);
+			if(immediate && !timeout) func.apply(context, args);
+		};
+	};
+
 })(window.jQuery, window, document);
