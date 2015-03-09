@@ -1,7 +1,7 @@
 html
 {
 	font-family: "Raleway", sans-serif;
-	color: #949494;
+	color: #666666;
 	background-color: #80B0CE;
 }
 /* BREAKPOINT: PORTRAIT TABLET AND WIDER */
@@ -90,9 +90,7 @@ h3
 	}
 }
 
-/* ==================================================
-    INTRO/WELCOME SECTION
-   ================================================== */
+/* INTRO/WELCOME SECTION ====================================================== */
 #intro
 {
 	color: #FFF;
@@ -108,7 +106,7 @@ h3
 		z-index: 1;
 	}
 }
-	/* ========== WELCOME HEADING ========== */
+	/* WELCOME HEADING ========================== */
 	#intro .welcome
 	{
 		margin-top: 120px;
@@ -122,7 +120,7 @@ h3
 			color: #80B0CE;
 			font-weight: 300;
 		}
-	/* ========== ROLE DESCRIPTIONS ========== */
+	/* ROLE DESCRIPTIONS ======================== */
 	#intro .roles
 	{
 		font-weight: 300;
@@ -151,7 +149,7 @@ h3
 			vertical-align: middle;
 			z-index: -1;
 		}
-	/* ========== CURRENT JOB INFO ========== */
+	/* CURRENT JOB INFO ========================= */
 	#intro .currently
 	{
 		margin-top: 15px;
@@ -170,34 +168,25 @@ h3
 			color: #FFF;
 			text-decoration: underline;
 		}
-		#intro .currently .iconLinkedIn,
-		#intro .currently .iconMercent
+		#intro .currently .details
 		{
 			position: absolute;
 			display: none;
 			height: 15px;
 			top: -1.5rem;
 			left: 0;
-			padding-left: 20px;
+			padding-left: 5px;
 			font-size: 13px;
 			font-weight: 400;
+			-webkit-animation-duration: 200ms;
+			-moz-animation-duration: 200ms;
+			animation-duration: 200ms;
 		}
-		#intro .currently .linkedIn:hover .iconLinkedIn,
-		#intro .currently .mercent:hover .iconMercent
+		#intro .currently a:hover .details
 		{
 			display: inline-block;
 		}
-		#intro .currently .iconLinkedIn
-		{
-			/* icon_linkedin_15x15.svg */
-			background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJpY29uX2xpbmtlZGluXzE1eDE1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE1cHgiIGhlaWdodD0iMTVweCIgdmlld0JveD0iMCAwIDE1IDE1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNSAxNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQoJPGc+DQoJCTxwYXRoIGZpbGw9IiMwMDczQTUiIGQ9Ik04LjA2Niw2Ljc2NVY2Ljc0NmMtMC4wMDQsMC4wMDYtMC4wMSwwLjAxMy0wLjAxMywwLjAxOUg4LjA2NnoiLz4NCgkJPHBhdGggZmlsbD0iIzAwNzNBNSIgZD0iTTEuMTEsMEMwLjQ5NSwwLDAsMC40ODEsMCwxLjA3NHYxMi44NTFDMCwxNC41MTksMC40OTUsMTUsMS4xMSwxNWgxMi43ODRDMTQuNTAzLDE1LDE1LDE0LjUxOSwxNSwxMy45MjYNCgkJCVYxLjA3NEMxNSwwLjQ4MSwxNC41MDMsMCwxMy44OTMsMEgxLjExeiBNNC41NDcsMTIuNTU3SDIuMjhWNS43ODJoMi4yNjhWMTIuNTU3eiBNMy40MTQsNC44NThIMy4zOTkNCgkJCWMtMC43NTksMC0xLjI1MS0wLjUyLTEuMjUxLTEuMTcxYzAtMC42NjMsMC41MDUtMS4xNywxLjI4Mi0xLjE3YzAuNzc2LDAsMS4yNTEsMC41MDcsMS4yNjYsMS4xNw0KCQkJQzQuNjk2LDQuMzM4LDQuMjA1LDQuODU4LDMuNDE0LDQuODU4eiBNMTIuNzE4LDEyLjU1N2gtMi4yNjhWOC45MzJjMC0wLjkxLTAuMzI3LTEuNTMxLTEuMTQ3LTEuNTMxDQoJCQljLTAuNjI2LDAtMC45OTgsMC40MTgtMS4xNjIsMC44MjNDOC4wNzksOC4zNyw4LjA2Niw4LjU3Miw4LjA2Niw4Ljc3M3YzLjc4M0g1LjgwMWMwLDAsMC4wMjktNi4xMzgsMC02Ljc3NGgyLjI2NXYwLjk2NA0KCQkJYzAuMjk5LTAuNDYzLDAuODM3LTEuMTIzLDIuMDQzLTEuMTIzYzEuNDkxLDAsMi42MSwwLjk2OCwyLjYxLDMuMDVWMTIuNTU3eiIvPg0KCTwvZz4NCjwvc3ZnPg==) no-repeat 0 0;
-		}
-		#intro .currently .iconMercent
-		{
-			/* icon_mercent_9x15.svg */
-			background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJpY29uX21lcmNlbnRfOXgxNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI5cHgiIGhlaWdodD0iMTVweCIgdmlld0JveD0iMCAwIDkgMTUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDkgMTUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KCTxwYXRoIGZpbGw9IiMwMjAyMDIiIGQ9Ik00LjQ5OSwxMC41ODRMMCw2LjE1NVYxNWgydi0zLjY3OWMwLTAuMjg4LTAuMTE3LTAuNjU2LTAuMTMyLTAuOTU5bDIuNjgzLDIuNzM0bDIuNjAzLTIuNzIzQzcuMTM3LDEwLjY3Nyw3LDExLjAzOCw3LDExLjMyMVYxNWgyVjYuMTU1TDQuNDk5LDEwLjU4NHoiLz4NCgk8cGF0aCBmaWxsPSIjMDIwMjAyIiBkPSJNNi4yOTIsMi4wMTRjLTAuMjkxLDAtMC41MjUsMC4yMzYtMC41MjUsMC41MjRjMCwwLjI4OSwwLjIzNCwwLjUyNSwwLjUyNSwwLjUyNWMwLjI4NywwLDAuNTIyLTAuMjM2LDAuNTIyLTAuNTI1QzYuODE0LDIuMjUsNi41NzksMi4wMTQsNi4yOTIsMi4wMTQiLz4NCgk8cGF0aCBmaWxsPSIjRUIwMDhCIiBkPSJNOCwzLjkzN2wtMy4zMjEsMy4xNEwxLjgxLDQuMjE4TDQuODYxLDFoMS42NTRMOCwyLjI3OXYxLjE1NWMwLDAuMDk4LDAsMC4xNzQsMSwwLjE4MVYxLjgwMkw2Ljk5NCwwSDQuMzgzTDAuMDg3LDQuMjk1bDQuNTEzLDQuNDE2TDksNC40MTRWMy41NDlDOCwzLjU0MSw4LDMuNTEyLDgsMy40MzRWMy45Mzd6Ii8+DQo8L3N2Zz4=) no-repeat 0 0;
-		}
-	/* ========== CONTINUE ARROW ========== */
+	/* CONTINUE ARROW =========================== */
 	#intro .continue
 	{
 		background-color: #80B0CE;
@@ -216,10 +205,7 @@ h3
 			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Imljb25fYXJyb3dfZG93bl8yMHgxMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyMCAxMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjAgMTAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTAsMTAgMTQuOCw1IDE5LjYsMCAxMCwwIDAuNCwwIDUuMiw1ICIvPjwvc3ZnPg==) no-repeat 0 0;
 		}
 
-
-/* ==================================================
-    BODY CONTENT CONTAINER
-   ================================================== */
+/* BODY CONTENT =============================================================== */
 #body
 {
 	background-color: #FFF;
@@ -239,7 +225,7 @@ h3
 			background: #FFF url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJiZ19saW5lXzF4MSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgd2lkdGg9IjFweCIgaGVpZ2h0PSIxcHgiIHZpZXdCb3g9IjAgMCAxIDEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEgMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHJlY3QgZmlsbD0iI0NGQ0ZDRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjwvc3ZnPg==) repeat-y 50%;
 		}
 	}
-	/* ========== NAV MENU ========== */
+	/* NAV MENU ================================= */
 	#nav
 	{
 		position: absolute;
@@ -272,7 +258,7 @@ h3
 			margin-right: 0;
 		}
 
-	/* ========== ABOUT SECTION ========== */
+	/* ABOUT SECTION ============================ */
 	#about
 	{
 	}
@@ -284,7 +270,7 @@ h3
 				margin-top: 55px;
 			}
 		}
-		/* ========== HISTORY ========== */
+		/* HISTORY ============================== */
 		#about .history
 		{
 			font-weight: 300;
@@ -313,7 +299,8 @@ h3
 			#about.micron .history .micron,
 			#about.ami .history .ami,
 			#about.iti .history .iti,
-			#about.mercent .history .mercent
+			#about.mercent .history .mercent,
+			#about.commerceHub .history .commerceHub
 			{
 				background-color: #80B0CE;
 			}
@@ -321,7 +308,7 @@ h3
 			{
 				font-size: 13px;
 			}
-		/* ========== DETAILS ========== */
+		/* DETAILS ============================== */
 		#about .details
 		{
 			font-weight: 300;
@@ -338,12 +325,14 @@ h3
 			#about .details .ami,
 			#about .details .iti,
 			#about .details .mercent,
+			#about .details .commerceHub,
 			#about.amarilloCollege .details .default,
 			#about.montanaTech .details .default,
 			#about.micron .details .default,
 			#about.ami .details .default,
 			#about.iti .details .default,
-			#about.mercent .details .default
+			#about.mercent .details .default,
+			#about.commerceHub .details .default
 			{
 				display: none;
 			}
@@ -352,7 +341,8 @@ h3
 			#about.micron .details .micron,
 			#about.ami .details .ami,
 			#about.iti .details .iti,
-			#about.mercent .details .mercent
+			#about.mercent .details .mercent,
+			#about.commerceHub .details .commerceHub
 			{
 				display: inline-block;
 			}
@@ -370,7 +360,7 @@ h3
 					font-weight: 400;
 					color: #222;
 				}
-		/* ========== REFERENCE QUOTE ========== */
+		/* REFERENCE QUOTE ====================== */
 		#about .reference
 		{
 			font-size: 19px;
@@ -395,7 +385,7 @@ h3
 			{
 				font-size: 17px;
 			}
-		/* ========== SKILLS ========== */
+		/* SKILLS =============================== */
 		#about .skills
 		{
 		}
@@ -413,7 +403,7 @@ h3
 				list-style: none;
 				font-weight: 300;
 			}
-	/* ========== WORK SECTION ========== */
+	/* WORK SECTION ================================ */
 	#work
 	{
 	}
@@ -447,10 +437,28 @@ h3
 					}
 			#work .image
 			{
-				background: gray;
 				height: 500px;
+				border: 1px solid #BABABA;
+				border-radius: 5px;
+				background-repeat: no-repeat;
 			}
-	/* ========== CONTACT SECTION ========== */
+			#work .krystyne_1
+			{
+				background-image: url("../img/krystyne_1.jpg");
+			}
+			#work .himc_1
+			{
+				background-image: url("../img/himc_1.jpg");
+			}
+			#work .photography_1
+			{
+				background-image: url("../img/photography_1.jpg");
+			}
+			#work .bugfu_1
+			{
+				background-image: url("../img/bugfu_1.jpg");
+			}
+	/* CONTACT SECTION ========================== */
 	#contact
 	{
 	}
@@ -460,98 +468,13 @@ h3
 			margin: 10px 10px 5px 0;
 			width: 30px;
 			height: 30px;
-			background: gray;
+			color: #666;
 		}
-		.icon.facebook
+		#contact .icon:hover
 		{
+			color: #80B0CE;
+			background-color: transparent;
 		}
-			.icon.facebook:hover
-			{
-			}
-		.icon.flickr
-		{
-		}
-			.icon.flickr:hover
-			{
-			}
-		.icon.forrst
-		{
-		}
-			.icon.forrst:hover
-			{
-			}
-		.icon.foursquare
-		{
-		}
-			.icon.foursquare:hover
-			{
-			}
-		.icon.github
-		{
-		}
-			.icon.github:hover
-			{
-			}
-		.icon.googlePlus
-		{
-		}
-			.icon.googlePlus:hover
-			{
-			}
-		.icon.instagram
-		{
-		}
-			.icon.instagram:hover
-			{
-			}
-		.icon.linkedIn
-		{
-		}
-			.icon.linkedIn:hover
-			{
-			}
-		.icon.pinterest
-		{
-		}
-			.icon.pinterest:hover
-			{
-			}
-		.icon.skype
-		{
-		}
-			.icon.skype:hover
-			{
-			}
-		.icon.stackOverflow
-		{
-		}
-			.icon.stackOverflow:hover
-			{
-			}
-		.icon.steam
-		{
-		}
-			.icon.steam:hover
-			{
-			}
-		.icon.twitter
-		{
-		}
-			.icon.twitter:hover
-			{
-			}
-		.icon.xbox
-		{
-		}
-			.icon.xbox:hover
-			{
-			}
-		.icon.youtube
-		{
-		}
-			.icon.youtube:hover
-			{
-			}
 		#contactMessage
 		{
 			display: inline-block;
@@ -561,6 +484,7 @@ h3
 			margin: 10px 0 10px 0;
 			padding: 3px 5px 3px 5px;
 			font-weight: 200;
+			font-size: 13px;
 			border: 1px solid #C4C4C4;
 			-webkit-border-radius: 3px;
 			   -moz-border-radius: 3px;
@@ -573,6 +497,7 @@ h3
 			margin: 0 0 15px 0;
 			padding: 3px 5px 3px 5px;
 			font-weight: 200;
+			font-size: 13px;
 			-webkit-border-radius: 3px;
 			   -moz-border-radius: 3px;
 			        border-radius: 3px;
@@ -580,8 +505,14 @@ h3
 		}
 		#contactSend
 		{
+			cursor: pointer;
+			text-decoration: none;
 		}
-	/* ========== FOOTER SECTION ========== */
+		#contact .invalid
+		{
+			border-color: #C84B71;
+		}
+	/* FOOTER SECTION =========================== */
 	#footer
 	{
 		background: #FFF;
