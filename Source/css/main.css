@@ -149,6 +149,31 @@ h3
 			vertical-align: middle;
 			z-index: -1;
 		}
+		#intro .roles .left
+		{
+			opacity: 0;
+			-webkit-transform: translateX(-50px);
+			   -moz-transform: translateX(-50px);
+			        transform: translateX(-50px);
+		}
+		#intro .roles .right
+		{
+			opacity: 0;
+			-webkit-transform: translateX(50px);
+			   -moz-transform: translateX(50px);
+			        transform: translateX(50px);
+		}
+		#intro .roles .left.show,
+		#intro .roles .right.show
+		{
+			opacity: 1;
+			-webkit-transform: translateX(0);
+			   -moz-transform: translateX(0);
+			        transform: translateX(0);
+			-webkit-transition: transform 500ms ease, opacity 400ms ease;
+			   -moz-transition: transform 500ms ease, opacity 400ms ease;
+			        transition: transform 500ms ease, opacity 400ms ease;
+		}
 	/* CURRENT JOB INFO ========================= */
 	#intro .currently
 	{
@@ -194,6 +219,14 @@ h3
 		font-weight: 200;
 		font-size: 15px;
 		padding: 5px 0 10px 0;
+		opacity: 0;
+	}
+	#intro .continue.show
+	{
+		opacity: 1;
+		-webkit-transition: opacity 300ms ease;
+		   -moz-transition: opacity 300ms ease;
+		        transition: opacity 300ms ease;
 	}
 		#intro .continue .arrow
 		{
@@ -441,14 +474,15 @@ h3
 				border: 1px solid #BABABA;
 				border-radius: 5px;
 				background-repeat: no-repeat;
+				background-position:  0 0;
 			}
 			#work .krystyne_1
 			{
 				background-image: url("../img/krystyne_1.jpg");
 			}
-			#work .himc_1
+			#work .blog_1
 			{
-				background-image: url("../img/himc_1.jpg");
+				background-image: url("../img/blog_1.jpg");
 			}
 			#work .photography_1
 			{

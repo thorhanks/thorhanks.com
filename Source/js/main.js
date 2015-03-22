@@ -1,25 +1,37 @@
-﻿(function()
+﻿/// <reference path="thirdParty/underscore.js"/>
+(function()
 {
-	var _Debounce = function (func, wait, immediate)
+	document.addEventListener("DOMContentLoaded", function()
 	{
-		// Returns a function, that, as long as it continues to be invoked, will not
-		// be triggered. The function will be called after it stops being called for
-		// N milliseconds. If `immediate` is passed, trigger the function on the
-		// leading edge, instead of the trailing.
+		/// <summary>Initializes the page.</summary>
 
-		var timeout;
-		return function ()
+		$(".roles .left, .roles .right").addClass("show");
+
+		setTimeout(function() { $("#intro .continue").addClass("show"); }, 2000);
+
+		_FitIntroSectionToWindow();
+		_SetCurrentEmploymentBarWidth();
+
+		$(window).on("resize", _.debounce(_FitIntroSectionToWindow, 300));
+		$(window).on("scroll", _.throttle(_HandleScroll, 300));
+
+		// History timeline bar on click handler
+		$("#about").find(".history .bar").on("click", function()
 		{
-			var context = this, args = arguments;
-			clearTimeout(timeout);
-			timeout = setTimeout(function ()
-			{
-				timeout = null;
-				if (!immediate) func.apply(context, args);
-			}, wait);
-			if (immediate && !timeout) func.apply(context, args);
-		};
-	};
+			document.getElementById("about").className = this.attributes["data-id"].value + " section";
+		});
+
+		// Project click handler
+		$("#work").find(".project").on("click", function(e)
+		{
+			var $target = $(e.target);
+
+			if(!$target.is("a"))
+				$(this).toggleClass("selected");
+		});
+
+		$("#contactSend").on("click", _SendEmail);
+	});
 
 	var _FitIntroSectionToWindow = function()
 	{
@@ -47,34 +59,6 @@
 
 		$('#nav').toggleClass('sticky', isPastIntro);
 		$('#visitSource').toggleClass('sticky', isPastIntro);
-	};
-
-	var _Init = function ()
-	{
-		/// <summary>Initializes the page.</summary>
-
-		_FitIntroSectionToWindow();
-		_SetCurrentEmploymentBarWidth();
-
-		$(window).on("resize", _Debounce(_FitIntroSectionToWindow, 300, false));
-		$(window).on("scroll", _Debounce(_HandleScroll, 300, false));
-
-		// History timeline bar on click handler
-		$("#about").find(".history .bar").on("click", function ()
-		{
-			document.getElementById("about").className = this.attributes["data-id"].value + " section";
-		});
-
-		// Project click handler
-		$("#work").find(".project").on("click", function (e)
-		{
-			var $target = $(e.target);
-
-			if (!$target.is("a"))
-				$(this).toggleClass("selected");
-		});
-
-		$("#contactSend").on("click", _SendEmail);
 	};
 
 	var _IsMobile = function()
@@ -130,6 +114,4 @@
 			}
 		});
 	};
-
-	_Init();
 })();
